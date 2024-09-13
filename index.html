@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizhead: Select Your Green Quiz</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: green;
+    }
+    select {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Quizhead: Select Your Green Quiz</h1>
+    <select id="quizSelect">
+      <option value="">-- Select a Quiz --</option>
+      <option value="https://quizheadsboardgame.github.io/aewquizv12024lfg/">AEW</option>
+      <option value="https://quizheadsboardgame.github.io/tsv2qh2024rurur/">Taylor Swift</option>
+      <option value="https://quizheadsboardgame.github.io/quizheadsowieurt1/">Horror</option>
+      <option value="https://quizheadsboardgame.github.io/IMV12024YTHRQH/">Iconic Movies</option>
+    </select>
+  </div>
+
+  <script>
+    document.getElementById('quizSelect').addEventListener('change', function() {
+      var url = this.value;
+      if (url) {
+        window.location.href = url;  // Redirects to the selected quiz URL
+      }
+    });
+  </script>
+
+</body>
+</html>
